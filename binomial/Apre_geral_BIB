@@ -1,0 +1,90 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: Cp1252
+
+@BOOK{efron1994,
+  title = {An Introduction to the Bootstrap},
+  publisher = {Taylor \& Francis},
+  year = {1994},
+  author = {B. Efron and R.J. Tibshirani},
+  series = {Chapman \& Hall/CRC Monographs on Statistics \& Applied Probability},
+  isbn = {9780412042317},
+  lccn = {93004489},
+  owner = {PapaMulheres},
+  timestamp = {2013.12.03},
+  url = {http://books.google.com.br/books?id=gLlpIUxRntoC}
+}
+
+@ARTICLE{Feynman,
+  author = {Richard P. Feynman},
+  title = {The theory of positrons},
+  journal = {Physical Review},
+  year = {1949},
+  volume = {76},
+  pages = {749-759},
+  number = {1},
+  month = may,
+  address = {New York}
+}
+
+@ARTICLE{gavish1982,
+  author = {B. Gavish},
+  title = {Topological Design of Centralized Computer-Networks - Formulations
+	and Algorithms},
+  journal = {Networks},
+  year = {1982},
+  volume = {12},
+  pages = {355-377},
+  number = {4},
+  doi = {10.1002/net.3230120402},
+  issn = {0028-3045},
+  unique-id = {ISI:A1982PR53000001}
+}
+
+@ARTICLE{HASTINGS1970,
+  author = {Hastings, Wk},
+  title = {Monte-carlo Sampling Methods Using Markov Chains And Their Applications},
+  journal = {Biometrika},
+  year = {1970},
+  volume = {57},
+  number = {{1}},
+  doi = {{10.1093/biomet/57.1.97}},
+  issn = {{0006-3444}},
+  owner = {alisson},
+  times-cited = {{3135}},
+  timestamp = {2013.11.18},
+  unique-id = {{ISI:A1970G040300009}}
+}
+
+@BOOK{magalhaes2002,
+  title = {No{\c c}{\~o}es de Probabilidade e Estat{\'i}stica},
+  publisher = {Edusp},
+  year = {2002},
+  author = {M. N. Magalh{\~a}es and A. C. P. de Lima},
+  address = {S\~ ao Paulo}
+}
+
+@ARTICLE{METROPOLIS1949,
+  author = {Metropolis, N And Ulam, S},
+  title = {The Monte Carlo Method},
+  journal = {Journal Of The American Statistical Association},
+  year = {{1949}},
+  volume = {{44}},
+  pages = {{335-341}},
+  number = {{247}},
+  doi = {{10.2307/2280232}},
+  issn = {{0162-1459}},
+  owner = {alisson},
+  timestamp = {2013.11.19},
+  unique-id = {{ISI:A1949UY89700001}}
+}
+
+@MANUAL{R,
+  title = {R: A Language and Environment for Statistical Computing},
+  author = {{R Core Team}},
+  organization = {R Foundation for Statistical Computing},
+  address = {Vienna, Austria},
+  year = {2013},
+  url = {http://www.R-project.org/}
+}
+
+
