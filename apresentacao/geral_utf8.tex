@@ -1,0 +1,116 @@
+\documentclass[12pt]{beamer}
+\usepackage{beamerthemeCopenhagen}
+\usecolortheme[rgb={0.18,0.3,0.3}]{structure}
+%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{pgf,tikz}
+\usepackage{bbm}
+
+\usetikzlibrary{arrows}
+
+\newcommand{\caixa}{$\Box$}
+\newtheorem{defi}{Definição}
+\newtheorem{ex}{Exemplo}
+\newtheorem{teo}{Teorema}
+\newtheorem{cor}{Corolário}
+\newtheorem{lema}{Lema}
+\newtheorem{dist}{Distribuição}
+\newtheorem{emv}{Máxima verossimilhança}
+\newtheorem{mo1}{Primeiro momento}
+\newtheorem{mo2}{Segundo momento}
+\newtheorem{prova}{Demonstração}
+\newtheorem{BiNeg}{Definição}
+
+\institute[IC-UFAL]{Universidade Federal de Alagoas\\
+Instituto de Computação}
+\title{Comparação de estimadores pelo método Monte Carlo das distribuições: $\mathcal{G}_{\rm I}^ {0}$, Uniforme, Binomial negativa, Gamma e Exponencial}
+\author{Antônio Marcos Larangeiras\and Alisson Nascimento\and
+  Paulo\and Bruno Normande\and Juliana Leal}
+\date{{\tiny Maceió-AL, Dezembro de 2013}}
+\begin{document}
+\begin{frame}
+\maketitle
+\begin{picture}(0,0)(0,-50)
+\includegraphics[scale=0.11]{IC.png}
+\end{picture}
+\begin{picture}(0,0)(-250,-40)
+\includegraphics[scale=0.13]{ufal.png}
+\end{picture}
+\end{frame} 
+
+%=========================
+\section{Introdução}
+%=========================
+
+
+%================================================================================
+\begin{frame}
+\frametitle{Introdução}
+\begin{itemize}
+\item Calcular o estimador por máxima verossimilhança;
+
+\bigskip
+
+\item Calcular estimador pelo primeiro momento;
+
+\bigskip
+
+\item Calcular estimador pelo segundo momento;
+
+\bigskip
+
+\item Utilizar o Método Monte Carlo força bruta.
+
+\end{itemize}
+\end{frame}
+%===============================================================================
+
+
+%========================
+\section{Distribuições}
+%========================
+
+\input{../gi0/dist_g_i_zero}
+\input{../uniforme/dist_uniforme}
+\input{../binomial/dist_binomial}
+
+%===================
+\section{Resultados}
+%===================
+
+%================================================================================
+\begin{frame}
+\frametitle{Resultados}
+
+\end{frame}
+%================================================================================
+
+%=====================
+\section{Conclusões}
+%=====================
+
+%================================================================================
+\begin{frame}
+\frametitle{Conclusões}
+
+\end{frame}
+%===============================================================================
+
+\section{Referências Bibliográficas}
+
+\begin{frame}
+\frametitle{Referências Bibliográficas}
+
+
+\bibliographystyle{plain}
+
+\bibliography{Larangeiras}
+
+
+\end{frame}
+\end{document}
