@@ -1,0 +1,64 @@
+\subsection{Distribuição Gamma}
+
+% =====================================================================================
+ \begin{frame}
+   \frametitle{Distribuição Gamma}
+
+   A Distribuição Gamma é caracterizada por dois valores, denominados
+   \textit{shape} ($k$) e \textit{scale} ($\theta$).
+
+   \begin{dist}[Função Probabilidade Densidade]
+     $$ f(x;k,\theta) = \frac{x^{k-1}e^{-\frac{x}{\theta}}}{\theta^k\Gamma(x)} $$ 
+
+     \begin{center}
+       para   
+
+       $ x > 0 $ e $ k,\theta > 0 $ 
+     \end{center}
+   \end{dist}
+ \end{frame}
+% ======================================================================================
+
+% ====================
+\subsubsection{Estimadores}
+% ====================
+
+
+\begin{frame}
+  \frametitle{Estimadores da distribuição Gamma}
+
+  Como foi definido que o valor de $\theta$ seria sempre igual a 1,
+  então basta estimar os valores de $k$.
+
+  \begin{emv}[Gamma]
+    
+  \end{emv}
+\end{frame}
+% ===================================================================================
+\begin{frame}
+  \frametitle{Estimadores da distribuição Gamma}
+  \begin{mo1}[Gamma]
+    \begin{align*}
+      E[X] &= k\theta \\
+      \hat{k} &= \frac{1}{n} \sum_{i=1}^nx_i
+    \end{align*}
+  \end{mo1}
+  
+  \begin{mc2}[Gamma]
+    \begin{align*}
+      Var[X] &= k\theta^2 \\
+      \hat{k} &= Var(x)
+    \end{align*}
+  \end{mc2}
+\end{frame}
+% ========================================================================================================================================================
+
+% ===================
+\subsubsection{Gráficos}
+% ===================
+% =========================================================================================================================================================
+\begin{frame}
+  \frametitle{Gráficos da distribuição $\mathcal{G}_{\rm I}^{0}$}
+
+\end{frame}
+% =========================================================================================================================================================
