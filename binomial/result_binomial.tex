@@ -1,0 +1,126 @@
+\subsection{Distribuição Binomial Negaiva}
+\begin{frame}
+\frametitle{Distribuição $BN(p,k)$}
+\tiny
+\begin{table}[h]
+\caption{Viés dos estimadores $\hat{p_{1}}$ e $\tilde{p_{1}}$.}
+\label{tab:p1Vies}
+\centering
+\begin{tabular}{rcccc}
+\toprule
+\multicolumn{5}{c}{Comparação dos viés dos Estimadores $\hat{p_{1}}$ e $\tilde{p_{1}}$}\\
+$n$ & $p$ & $B(\hat{p_{1}})$ & $B(\tilde{p_{1}})$ & $|B(\hat{p_{1}})|>|B(\tilde{p_{1}})|$ \\
+\midrule
+50 & 0.1 & 0.01158347 & 0.01108683 & TRUE \\
+100 & 0.1 & 0.01147125 & 0.01124116 & TRUE \\
+150 & 0.1 & 0.01129354 & 0.01113929 & TRUE \\
+100000 & 0.1 & 0.01110255 & 0.01110307 & FALSE \\
+\midrule
+50 & 0.2 & 0.05069611 & 0.04952346 & TRUE \\
+100 & 0.2 & 0.05113692 & 0.05050091 & TRUE \\
+150 & 0.2 & 0.05021439 & 0.04981072 & TRUE\\
+100000 & 0.2 & 0.05000023 & 0.05000045 & FALSE \\
+\midrule
+50 & 0.3 & 0.13303390 & 0.13062580 & TRUE \\
+100 & 0.3 & 0.12839159 & 0.12709425 & TRUE \\
+150 & 0.3 & 0.12910398 & 0.12821978 & TRUE \\
+100000 & 0.3 & 0.12858837 & 0.12858547 & TRUE \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Distribuição $BN(p,k)$}
+
+\tiny
+\begin{table}[h]
+\caption{EQM dos estimadores $\hat{p_{1}}$ e $\tilde{p_{1}}$.}
+\label{tab:p1EQM}
+\centering
+\begin{tabular}{rcccc}
+\toprule
+\multicolumn{5}{c}{Comparação dos EQM do Estimador $\hat{p_{1}}$ e $\tilde{p_{1}}$}\\
+$n$ & $p$ & $EQM(\hat{p_{1}})$ & $EQM(\tilde{p_{1}})$ & $EQM(\hat{p_{1}})>EQM(\tilde{p_{1}})$ \\
+\midrule
+50 & 0.1 & 0.0001897657 & 0.0001792158 & TRUE \\
+100 & 0.1 & 0.0001601663 & 0.0001552416 & TRUE \\
+150 & 0.1 & 0.0001461537 & 0.0001429903 & TRUE \\
+100000 & 0.1 & 0.0001232947 & 0.0001233068 & FALSE \\
+\midrule
+50 & 0.2 & 0.0028992563 & 0.0027791147 & TRUE \\
+100 & 0.2 & 0.0027753925 & 0.0027122546 & TRUE \\
+150 & 0.2 & 0.0026332882 & 0.0025933471 & TRUE\\
+100000 & 0.2 & 0.0025001601 & 0.0025001831 & FALSE \\
+\midrule
+50 & 0.3 & 0.0188113709 & 0.0181701887 & TRUE \\
+100 & 0.3 & 0.0170132255 & 0.0166791609 & TRUE \\
+150 & 0.3 & 0.0170230361 & 0.0167979328 & TRUE \\
+100000 & 0.3 & 0.0165355188 & 0.0165347806 & TRUE \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Distribuição $BN(p,k)$}
+\tiny
+\begin{table}[h]
+\caption{Comparação dos estimadores $\hat{p_{2}}$ e $\tilde{p_{2}}$.}
+\label{tab:p2}
+\centering
+\begin{tabular}{rccc}
+\toprule
+\multicolumn{4}{c}{Comparação dos Estimadores $\hat{p_{2}}$ e $\tilde{p_{2}}$}\\
+$n$ & $p$ & $|B(\hat{p_{2}})|>|B(\tilde{p_{2}})|$ & $EQM(\hat{p_{2}})>EQM(\tilde{p_{2}})$ \\
+\midrule
+50 & 0.1 & TRUE & FALSE \\
+100 & 0.1 & TRUE & FALSE \\
+150 & 0.1 & TRUE & FALSE \\
+100000 & 0.1 & TRUE & FALSE \\
+\midrule
+50 & 0.2 & TRUE & TRUE \\
+100 & 0.2 & TRUE & FALSE \\
+150 & 0.2 & FALSE & FALSE\\
+100000 & 0.2 & TRUE & FALSE \\
+\midrule
+50 & 0.3 & TRUE & FALSE \\
+100 & 0.3 & TRUE & FALSE \\
+150 & 0.3 & FALSE & FALSE \\
+100000 & 0.3 & FALSE & FALSE \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Distribuição $BN(p,k)$}
+\tiny
+\begin{table}[h]
+\caption{Comparação dos estimadores $\hat{p_{3}}$ e $\tilde{p_{3}}$.}
+\label{tab:p2}
+\centering
+\begin{tabular}{rccc}
+\toprule
+\multicolumn{4}{c}{Comparação dos Estimadores $\hat{p_{3}}$ e $\tilde{p_{3}}$}\\
+$n$ & $p$ & $|B(\hat{p_{3}})|>|B(\tilde{p_{3}})|$ & $EQM(\hat{p_{3}})>EQM(\tilde{p_{3}})$ \\
+\midrule
+50 & 0.1 & TRUE & TRUE \\
+100 & 0.1 & TRUE & TRUE \\
+150 & 0.1 & TRUE & TRUE \\
+100000 & 0.1 & TRUE & TRUE \\
+\midrule
+50 & 0.2 & TRUE & TRUE \\
+100 & 0.2 & TRUE & TRUE \\
+150 & 0.2 & TRUE & TRUE \\
+100000 & 0.2 & TRUE & TRUE \\
+\midrule
+50 & 0.3 & TRUE & TRUE \\
+100 & 0.3 & TRUE & TRUE \\
+150 & 0.3 & TRUE & TRUE \\
+100000 & 0.3 & TRUE & TRUE \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}

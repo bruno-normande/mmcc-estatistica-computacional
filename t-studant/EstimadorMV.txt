@@ -1,0 +1,58 @@
+
+amostra <- c(50,100,150,100000) # vetor que contém os números de amostras
+glib <- 5 # grau de liberdade
+para <-rep(0,4) # vetor para armazenagem das estimativas
+
+# ---------- Estimação do grau de liberdade por MV mediante a função uniroot -------------------
+
+for (j in 1:4)
+{
+x <- rt(amostra[j],glib)
+
+raiz <- uniroot( function(para) amostra[j]*(0.5*digamma((para+1)/2)-0.5*digamma(para/2)-1/(2*para))-0.5*sum(log(1+x^2/para))+0.5*(para+1)*sum(x^2/(para^2+para*x^2)), lower =0.05, upper= 100)
+para[j] <- raiz$root
+plot(function(y) dt(y, glib), -3, 3, col=1,add=T )
+plot(function(y) dt(y, para[j]), -3, 3, col=j+1, add=T)
+legend(1.9, 0.35, c(paste("gL=", as.character(glib)), paste("gL=",as.character(round(para[1],2))), paste("gL=",as.character(round(para[2],2))), paste("gL=",as.character(round(para[3],2))), paste("gL=",as.character(round(para[4],2)))), fill=1:5)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n = 1000
+gl = 5
+
+obj <- function(gl,x){
+
+n*(0.5*digamma((gl+1)/2)-0.5*digamma(gl/2)-1/(2*gl))-0.5*sum(log(1+x^2/2))+0.5*(gl+1)*sum(x^2/(gl^2+gl*x^2))
+}
+
+x <- rt(n, gl)
+
+raiz <- uniroot(obj, lower =0, upper = 10,gl,x)
+
+gL=5
+n = 100000
+x <- rt(n, gL)
+raiz<- uniroot( function(gl) n*(0.5*digamma((gl+1)/2)-0.5*digamma(gl/2)-1/(2*gl))-0.5*sum(log(1+x^2/gl))+0.5*(gl+1)*sum(x^2/(gl^2+gl*x^2)), lower =0.05, upper= 10)

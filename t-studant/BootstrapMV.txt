@@ -1,0 +1,33 @@
+glib=5
+
+B= 200
+
+amostra <- c(1000,10000,50000,100000) # vetor que contém os números de amostras
+para <-rep(0,length(amostra)) # vetor para armazenagem das estimativas
+vies.boot <- rep(0,length(amostra))
+eqm.boot <- rep(0,length(amostra))
+para.boot <- rep(0,B)
+
+for (j in 1:length(amostra)){
+
+x <- rt(amostra[j],glib)
+
+raiz <- uniroot( function(para) amostra[j]*(0.5*digamma((para+1)/2)-0.5*digamma(para/2)-1/(2*para))-0.5*sum(log(1+x^2/para))+0.5*(para+1)*sum(x^2/(para^2+para*x^2)), lower =0.005, upper= 10000)
+
+para[j] <- raiz$root
+
+for (i in 1:B){
+    y = sample(rt(amostra[j],glib),replace=T)
+    raiz.boot <- uniroot( function(para) amostra[j]*(0.5*digamma((para+1)/2)-0.5*digamma(para/2)-1/(2*para))-0.5*sum(log(1+y^2/para))+0.5*(para+1)*sum(y^2/(para^2+para*y^2)), lower =0.005, upper= 10000)
+    para.boot[i] <- raiz.boot$root
+        }
+
+vies.boot[j] = mean(para.boot) - para[j] 
+eqm.boot[j] = var(x) - vies.boot[j]^2
+
+}
+
+hist(para.boot, nclass=12,prob= T)
+lines(density(para.boot))
+
+

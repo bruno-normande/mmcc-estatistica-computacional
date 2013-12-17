@@ -4,12 +4,19 @@
 %\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 %\usepackage[latin1]{inputenc}
-\usepackage[brazil]{babel}
+%\usepackage[brazil]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amsthm}
 \usepackage{pgf,tikz}
 \usepackage{bbm}
+
+\usepackage{graphicx}
+\usepackage{url,color,ae}
+\usepackage{listings,color,upquote}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{booktabs}
 
 \usetikzlibrary{arrows}
 
@@ -23,9 +30,9 @@
 \newtheorem{emv}{Máxima verossimilhança}
 \newtheorem{mo1}{Primeiro momento}
 \newtheorem{mo2}{Segundo momento}
-\newtheorem{mc2}{Segundo momento central}
 \newtheorem{prova}{Demonstração}
 \newtheorem{BiNeg}{Definição}
+\setbeamertemplate{navigation symbols}{}
 
 \institute[IC-UFAL]{Universidade Federal de Alagoas\\
 Instituto de Computação}
@@ -76,8 +83,8 @@ Instituto de Computação}
 \section{Distribuições}
 %========================
 
-\input{../gi0/dist_g_i_zero}
 \input{../uniforme/dist_uniforme}
+\input{../gi0/dist_g_i_zero}
 \input{../binomial/dist_binomial}
 \input{../gamma/dist_gamma}
 
@@ -86,10 +93,8 @@ Instituto de Computação}
 %===================
 
 %================================================================================
-\begin{frame}
-\frametitle{Resultados}
-
-\end{frame}
+%\input{../unforme/result_uniforme}
+\input{../binomial/result_binomial}
 %================================================================================
 
 %=====================

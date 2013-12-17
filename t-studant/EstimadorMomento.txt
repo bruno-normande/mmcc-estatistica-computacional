@@ -1,0 +1,20 @@
+
+amostra <- c(50,100,150,100000) # vetor que contém os números de amostras
+glib <- 5 # grau de liberdade
+
+para <-rep(0,4) # vetor para armazenagem das estimativas
+
+# ---------- Estimação do grau de liberdade por Momento -------------------
+
+for (j in 1:4)
+{
+
+distr <- rt(amostra[j],glib)
+media1 <- mean(distr)
+media2 <- mean(distr^2)
+estvar <- media2 - media1^2
+para[j] <- (2*estvar)/(estvar-1)
+plot(function(x) dt(x, glib), -3, 3, col=1,add=T )
+plot(function(x) dt(x, para[j]), -3, 3, col=j+1, add=T)
+legend(1.9, 0.35, c(paste("gL=", as.character(glib)), paste("gL=",as.character(round(para[1],2))), paste("gL=",as.character(round(para[2],2))), paste("gL=",as.character(round(para[3],2))), paste("gL=",as.character(round(para[4],2)))), fill=1:5)
+}

@@ -1,0 +1,29 @@
+
+glib=5
+
+B= 200
+
+amostra <- c(50,100,150,100000)
+
+media.boot <- rep(0,B)
+vies.boot <- rep(0,length(amostra))
+eqm.boot <- rep(0,length(amostra))
+
+for (j in 1:length(amostra))
+
+amostra.original = rt(amostra[j],glib)
+media.hat = mean(amostra.original)
+
+{
+for (i in 1:B){
+    amostraboot = sample(rt(amostra[j],glib),replace=T)
+    media.boot[i] <- mean(amostraboot)
+        }
+
+vies.boot[j] = mean(media.boot) - media.hat 
+eqm.boot[j] = var(amostra.original) - vies.boot[j]^2
+
+}
+
+hist(media.boot, nclass=12,prob= T)
+lines(density(media.boot))
