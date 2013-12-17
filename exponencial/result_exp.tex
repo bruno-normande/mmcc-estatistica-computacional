@@ -1,0 +1,199 @@
+\subsection{Distribuição Exponencial}
+\begin{frame}
+\frametitle{Distribuição Exponencial} 
+A primeira tabela refere-se ao viés do estimador por máximo verossimilhança - $1/\bar{x}$.
+
+\begin{table}[H]
+\caption{Viés dos estimadores $\hat{\lambda_{1}}$ e $\tilde{\lambda_{1}}$.}
+\label{tab:p1Vies}
+\tiny
+\centering
+\begin{tabular}{rcccc}
+\toprule
+\multicolumn{5}{c}{Comparação dos viés do Estimador $\hat{\lambda_{1}}$}\\
+$n$ & $\lambda$ & $B(\hat{\lambda_{1}})$ & $B(\tilde{\lambda_{1}})$ & $B(\hat{\lambda_{1}})>B(\tilde{\lambda_{1}})$ \\
+\midrule
+50 & 0.3 & 8.563419e-03 & 2.540733e-03  & TRUE \\
+100 & 0.3 & 3.249035e-03 & 2.168678e-04 & TRUE \\
+150 & 0.3 & 2.728954e-03 & 7.411608e-04 & TRUE \\
+100000 & 0.3 & 1.972002e-05 & 1.913857e-05 & TRUE \\
+\midrule
+50 & 0.5 & 1.407817e-02 & 4.055892e-03  & TRUE \\
+100 & 0.5 &  2.494619e-03 & -2.560141e-03 & TRUE \\
+150 & 0.5 &  4.027130e-03  & 8.587662e-04 & TRUE\\
+100000 & 0.5 & -3.786119e-05 & -4.269957e-05 & TRUE \\
+\midrule
+50 & 2 & 4.727426e-02 &  5.441983e-03 & TRUE \\
+100 & 2 & 2.435143e-02 & 4.153628e-03 & TRUE \\
+150 & 2 & 2.496612e-02 & 1.171509e-02 & TRUE \\
+100000 & 2 & -5.638649e-05 & -5.874376e-05 & FALSE \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Distribuição Exponencial}
+A tabela a seguir trata-se dos valores do EQM em relação a máximo verossimilhança - $1/\hat{x}$.
+
+\begin{table}[H]
+\caption{EQM dos estimadores $\hat{\lambda_{1}}$ e $\tilde{\lambda_{1}}$.}
+\label{tab:p1EQM}
+\tiny
+\centering
+\begin{tabular}{rcccc}
+\toprule
+\multicolumn{5}{c}{Comparação dos EQM do Estimador $\hat{\lambda_{1}}$}\\
+$n$ & $\lambda$ & $EQM(\hat{\lambda_{1}})$ & $EQM(\tilde{\lambda_{1}})$ & $EQM(\hat{\lambda_{1}})>EQM(\tilde{\lambda_{1}})$ \\
+\midrule
+50 & 0.3 & 2.194808e-03 & 2.056801e-03  & TRUE \\
+100 & 0.3 & 8.528248e-04 & 8.278781e-04 & TRUE \\
+150 & 0.3 & 5.894819e-04 & 5.826339e-04 & TRUE \\
+100000 & 0.3 & 8.415198e-07 & 8.443515e-07 & FALSE \\
+\midrule
+50 & 0.5 & 6.094502e-03 & 5.732249e-03  & TRUE \\
+100 & 0.5 &  2.729694e-03 & 2.662651e-03 & TRUE \\
+150 & 0.5 &  1.750662e-03  & 1.727247e-03 & TRUE\\
+100000 & 0.5 & 2.577277e-06 & 2.615424e-06 & FALSE \\
+\midrule
+50 & 2 & 8.901878e-02 &  8.467163e-02 & TRUE \\
+100 & 2 & 4.237920e-02 &  4.133330e-02 & TRUE \\
+150 & 2 & 3.086910e-02 & 3.009429e-02 & TRUE \\
+100000 & 2 & 3.996599e-05 & 4.038770e-05 & FALSE \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Distribuição Exponencial}
+A tabela abaixo apresenta a diferença entre o viés no momento amostra de ordem 1.  $\sqrt{1/var(x)}$.
+
+
+\begin{table}[H]
+\caption{Viés dos estimadores $\hat{\lambda_{2}}$ e $\tilde{\lambda_{2}}$.}
+\label{tab:p1Vies}
+\tiny
+\centering
+\begin{tabular}{rcccc}
+\toprule
+\multicolumn{5}{c}{Comparação dos viés do Estimador $\hat{\lambda_{2}}$}\\
+$n$ & $\lambda$ & $B(\hat{\lambda_{2}})$ & $B(\tilde{\lambda_{2}})$ & $B(\hat{\lambda_{2}})>B(\tilde{\lambda_{2}})$ \\
+\midrule
+50 & 0.3 & 2.000133e-02 & 3.046579e-03  & TRUE \\
+100 & 0.3 & 8.539564e-03 & -3.095717e-04 & TRUE \\
+150 & 0.3 & 5.592596e-03 & -4.209541e-04 & TRUE \\
+100000 & 0.3 & 4.246102e-05 & 3.181654e-05 & TRUE \\
+\midrule
+50 & 0.5 & 3.125010e-02 & 3.198028e-03  & TRUE \\
+100 & 0.5 &  1.661312e-02 & 2.302152e-03 & TRUE \\
+150 & 0.5 &  1.293862e-02  & 2.823622e-03 & TRUE\\
+100000 & 0.5 & 1.875328e-05 & -4.204228e-06 & TRUE \\
+\midrule
+50 & 2 & 1.312796e-01 &  2.056332e-02 & TRUE \\
+100 & 2 & 4.087539e-02 & -1.814831e-02 & TRUE \\
+150 & 2 & 5.083462e-02 & 9.218771e-03 & TRUE \\
+100000 & 2 & 3.786189e-04 & 2.994606e-04 & FALSE \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Distribuição Exponencial}
+Tabela referente ao EQM do momento amostra de ordem 1.
+
+\begin{table}[H]
+\caption{EQM dos estimadores $\hat{\lambda_{2}}$ e $\tilde{\lambda_{2}}$.}
+\label{tab:p1EQM}
+\tiny
+\centering
+\begin{tabular}{rcccc}
+\toprule
+\multicolumn{5}{c}{Comparação dos EQM do Estimador $\hat{\lambda_{2}}$}\\
+$n$ & $\lambda$ & $EQM(\hat{\lambda_{2}})$ & $EQM(\tilde{\lambda_{2}})$ & $EQM(\hat{\lambda_{2}})>EQM(\tilde{\lambda_{2}})$ \\
+\midrule
+50 & 0.3 & 4.174063e-03 & 3.976735e-03  & TRUE \\
+100 & 0.3 & 1.990066e-03 & 1.991264e-03 & FALSE \\
+150 & 0.3 & 1.247754e-03 & 1.253155e-03 & FALSE \\
+100000 & 0.3 & 1.783617e-06 & 1.808211e-06 & FALSE \\
+\midrule
+50 & 0.5 & 1.201819e-02 & 1.144396e-02  & TRUE \\
+100 & 0.5 &  5.240721e-03 & 5.232843e-03 & TRUE \\
+150 & 0.5 &  3.648914e-03  & 3.671078e-03 & FALSE\\
+100000 & 0.5 & 5.287958e-06 & 5.308073e-06 & FALSE \\
+\midrule
+50 & 2 & 1.903238e-01 &  1.831975e-01 & TRUE \\
+100 & 2 & 8.064018e-02 &  8.440508e-02 & FALSE \\
+150 & 2 & 5.738582e-02 & 5.732075e-02 & TRUE \\
+100000 & 2 & 9.050068e-05 & 9.245068e-05 & FALSE \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Distribuição Exponencial}
+Quadro de comparação do viés do momento amostral de oredem 2. $\sqrt{1/mean^2}$
+
+\begin{table}[H]
+\caption{Viés dos estimadores $\hat{\lambda_{3}}$ e $\tilde{\lambda_{3}}$.}
+\label{tab:p1Vies}
+\tiny
+\centering
+\begin{tabular}{rcccc}
+\toprule
+\multicolumn{5}{c}{Comparação dos viés do Estimador $\hat{\lambda_{3}}$}\\
+$n$ & $\lambda$ & $B(\hat{\lambda_{3}})$ & $B(\tilde{\lambda_{3}})$ & $B(\hat{\lambda_{3}})>B(\tilde{\lambda_{3}})$ \\
+\midrule
+50 & 0.3 & -8.009634e-02 & -8.679385e-02  & TRUE \\
+100 & 0.3 & -8.220733e-02 & -8.578620e-02 & TRUE \\
+150 & 0.3 & -8.501436e-02 & -8.756115e-02 & TRUE \\
+100000 & 0.3 & -8.784743e-02 & -8.785105e-02 & TRUE \\
+\midrule
+50 & 0.5 & -1.360553e-01 & -1.467689e-01  & TRUE \\
+100 & 0.5 &  -1.360536e-01 & -1.420749e-01 & TRUE \\
+150 & 0.5 &  -1.424886e-01  & -1.466395e-01 & TRUE\\
+100000 & 0.5 & -1.464497e-01 & -1.464554e-01 & TRUE \\
+\midrule
+50 & 2 & -5.376391e-01 &  -5.817923e-01 & TRUE \\
+100 & 2 & -5.609116e-01 & -5.853201e-01 & TRUE \\
+150 & 2 & -5.694220e-01 & -5.854173e-01 & TRUE \\
+100000 & 2 & -5.856539e-01 & -5.856595e-01 & TRUE \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Distribuição Exponencial}
+Quadro com a comparação do EQM do momento amostral de oredem 2.
+
+\begin{table}[H]
+\caption{EQM dos estimadores $\hat{\lambda_{3}}$ e $\tilde{\lambda_{3}}$.}
+\label{tab:p1EQM}
+\tiny
+\centering
+\begin{tabular}{rcccc}
+\toprule
+\multicolumn{5}{c}{Comparação dos EQM do Estimador $\hat{\lambda_{3}}$}\\
+$n$ & $\lambda$ & $EQM(\hat{\lambda_{3}})$ & $EQM(\tilde{\lambda_{3}})$ & $EQM(\hat{\lambda_{3}})>EQM(\tilde{\lambda_{3}})$ \\
+\midrule
+50 & 0.3 & 7.650300e-03 & 8.777607e-03  & FALSE \\
+100 & 0.3 & 7.388421e-03 & 8.009593e-03 & TRUE \\
+150 & 0.3 & 7.594362e-03 & 8.044213e-03 & TRUE \\
+100000 & 0.3 & 7.717755e-03 & 7.718391e-03 & FALSE \\
+\midrule
+50 & 0.5 & 2.170059e-02 & 2.482344e-02  & FALSE \\
+100 & 0.5 &  2.018802e-02 & 2.192635e-02 & FALSE \\
+150 & 0.5 &  2.138781e-02  & 2.260983e-02 & FALSE\\
+100000 & 0.5 & 2.144894e-02 & 2.145065e-02 & FALSE \\
+\midrule
+50 & 2 & 3.442212e-01 &  3.937709e-01 & FALSE \\
+100 & 2 & 3.400614e-01 &  3.686495e-01 & FALSE \\
+150 & 2 & 3.420241e-01 & 3.608734e-01 & FALSE \\
+100000 & 2 & 3.430148e-01 & 3.430220e-01 & FALSE \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}

@@ -1,0 +1,73 @@
+%==============================================================================================
+\subsection{Distribuição Exponencial}
+\begin{frame}
+\frametitle{Distribuição Exponencial}
+A distribuição exponencial é frequentemente usada em estudos de confiabilidade como sendo um modelo para o tempo até a falha de um equipamento. Essa distribuição funciona como o inverso da distribuição Poisson. Enquanto a Poisson estima a quantidade de eventos em um intervalo, a exponencial analisa um intervalo ou espaço para a ocorrência de um evento. 
+
+Sua função densidade é dada por:
+
+\begin{equation}
+ F(v) = 1 - e^{-\lambda v}, \textnormal{para } v \geq 0.
+\end{equation}
+
+\end{frame}
+
+%========================================================================================================================================================
+\begin{frame}
+\frametitle{Distribuição $Exp(\lambda)$}
+
+A esperança matemática da distribuição $Exp(\lambda)$:
+
+\begin{equation}
+\label{eq:Exp_esp}
+E(V)=1/\lambda
+\end{equation}\pause
+
+A variância da distribuição $Exp(\lambda)$:
+
+\begin{equation}
+\label{eq:Esp_var}
+Var(V)=1/\lambda^2
+\end{equation}
+
+\end{frame}
+
+%====================
+\subsubsection{Estimadores}
+%====================
+\begin{frame}
+\frametitle{Estimadores da Distribuição $Exp(\lambda)$}
+Pela Máxima Veressimilhança:
+\small \begin{equation}
+\label{eq:Exp_MV}
+\hat{\lambda}=1/\bar{V}
+\end{equation} \pause
+Pelo momento primeiro momento:
+\begin{eqnarray}
+\label{eq:Exp_m_p2}
+\hat{\lambda}_{2}=1/\lambda
+\end{eqnarray}
+\end{frame}
+
+\begin{frame}
+\frametitle{Estimadores da Distribuição $Exp(\lambda)$}
+Pelo segundo momento:
+\begin{equation}
+\label{eq:Exp_m_p3}
+\hat{\lambda}_{3} = 2/\lambda^2
+\end{equation}
+
+\end{frame}
+
+
+%===================
+\subsubsection{Gráficos}
+%=========================================================================================================================================================
+\begin{frame}
+\frametitle{Gráficos da distribuição $Exp(\lambda)$}
+
+\end{frame}
+%=========================================================================================================================================================
+
+
+
