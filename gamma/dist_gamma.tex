@@ -1,75 +1,95 @@
-%==============================================================================================
-\subsection{Distribuição Gamma}
+%==========================================================================
+\subsection{Distribuição $\Gamma(w;k,\theta)$}
 \begin{frame}
-\frametitle{Distribuição Gamma}
+  \frametitle{Distribuição $\Gamma(w;k,\theta)$}
+  
+  A Distribuição Gamma é caracterizada por dois valores, denominados
+  \textit{shape} ($k$) e \textit{scale} ($\theta$). Ela possui a
+  seguinte função densidade probabilidade:
 
-   A Distribuição Gamma é caracterizada por dois valores, denominados
-   \textit{shape} ($k$) e \textit{scale} ($\theta$).
-
-\begin{displaymath}
- f(w;k,\theta) = \frac{w^{k-1}e^{-\frac{w}{\theta}}}{\theta^k\Gamma(w)}
-\end{displaymath}
-
-para, $ w > 0 $ e $ k,\theta > 0 $ 
-
-Como foi definido que o valor de $\theta$ seria sempre igual a 1,
-então basta estimar os valores de $k$.
-
+  \begin{displaymath}
+    f(w;k,\theta) = \frac{w^{k-1}e^{-\frac{w}{\theta}}}{\theta^k\Gamma(w)}
+  \end{displaymath}
+  
+  para, $ w > 0 $ e $ k,\theta > 0 $ 
 \end{frame}
 
-%========================================================================================================================================================
+%==========================================================================
 \begin{frame}
-\frametitle{Distribuição $\Gamma(w;k,1)$}
+  \frametitle{Distribuição $\Gamma(w;k,\theta)$}
 
-A esperança matemática da distribuição $\Gamma(w;k,1)$:
+  Esperança da distribuição $\Gamma(w;k,\theta)$:
 
-\begin{equation}
-\label{eq:G_esp}
-\begin{align*}
-      E[W] &= k\theta \\
-      \hat{k} &= \frac{1}{n} \sum_{i=1}^nw_i
-    \end{align*}
-\end{equation}\pause
+  \begin{equation}
+    \label{eq:G_esp}
+     E[W] = k\theta
+  \end{equation}\pause
+  
+  A variância da distribuição $\Gamma(w;k,\theta)$:
+  
+  \begin{equation}
+    \label{eq:G_var}
+      Var[W] = k\theta^2
+  \end{equation}
 
-A variância da distribuição $\Gamma(w;k,1)$:
-
-\begin{equation}
-\label{eq:G_var}
-\begin{align*}
-       Var[W] &= k\theta^2 \\
-      \hat{k} &= Var(w)  
-\end{align*}
-\end{equation}
-
+  Em nosso estudo usaremos sempre $\theta = 1$ para simplicidade dos cálculos.
 \end{frame}
 
-%====================
+% ====================
 \subsubsection{Estimadores}
-%====================
+% ====================
 \begin{frame}
-\frametitle{Estimadores da Distribuição $\Gamma(w;k,1)$}
-Pela Máxima Veressimilhança:
-\small \begin{equation}
-\label{eq:G_MV}
-falta
-\end{equation} \pause
+  \frametitle{Estimadores da Distribuição $\Gamma(w;k,1)$}
+  
+  Para estimar pela Máxima Verossimilhança é preciso encontrar o
+  máximo da função log-verossimilhança de $\Gamma(w;k,1)$
 
-Pelo momento primeiro momento:
-\begin{eqnarray}
-\label{eq:G_m_p2}
-falta
-\end{eqnarray}
-
+  \small \begin{align*}
+%    \label{eq:Gamma_MV}
+    log(p(W|k,1)) &= n(k-1)\overline{log(x)} - n log(\Gamma(k)) - n k
+    log(\overline{x}) + \\
+    & n k log(a) - n k
+    \intertext{Que podemos resolver numericamente iterando sobre k em:}
+%    log(p(W|k,1)) &\approx c_0 + c_1a + c_2log(a)
+    \frac{1}{k} &= \frac{1}{k_0} + \frac{\overline{log(x)} -
+      log(\overline{x}) + log(k_0) - \psi(k_0)}{k_0^2 (\frac{1}{k_0} -
+      \psi'(k_0))}
+  \end{align*}
 \end{frame}
 
 \begin{frame}
-\frametitle{Estimadores da Distribuição $\Gamma(w;k,1)$}
-Pelo segundo momento:
-\begin{equation}
-\label{eq:G_m_p3}
-falta
-\end{equation}
+  \frametitle{Estimadores da Distribuição $\Gamma(w;k,1)$}
+  Quando $k \approx k_0$ então encontramos o estimador $\hat{k}$  
 
+  \small \begin{align*}
+%    \label{eq:Gamma_MV}
+    \intertext{Como k inicial podemos usar a seguinte aproximação}
+    \hat{k} &= \frac{0.5}{log(\overline{x}) - \overline{log(x)}}
+  \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Estimadores da Distribuição $\Gamma(w;k,1)$}
+  
+  Estimador pelo primeiro momento:
+  
+    \begin{align*}
+%      \label{eq:G_m_p2}
+      E[W] &= k\theta \\
+      \hat{k}_1 &= \frac{1}{n} \sum_{i=1}^nw_i 
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Estimadores da Distribuição $\Gamma(w;k,1)$}
+  
+  Estimador pelo segundo momento central:
+  
+    \begin{align*}
+%      \label{eq:G_m_p3}
+      Var[W] &= k\theta^2 \\
+      \hat{k}_2^0 &= Var(w)  
+    \end{align*}
 \end{frame}
 
 
