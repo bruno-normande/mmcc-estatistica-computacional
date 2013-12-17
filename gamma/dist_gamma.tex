@@ -41,10 +41,10 @@
 \begin{frame}
   \frametitle{Estimadores da Distribuição $\Gamma(w;k,1)$}
   
-  Para estimar pela Máxima Verossimilhança é preciso encontrar o
-  máximo da função log-verossimilhança de $\Gamma(w;k,1)$
+  Para estimar pela Máxima Verossimilhança é preciso maximizar a
+  sua função log-verossimilhança de $\Gamma(w;k,1)$
 
-  \small \begin{align*}
+  \small \begin{align}
 %    \label{eq:Gamma_MV}
     log(p(W|k,1)) &= n(k-1)\overline{log(x)} - n log(\Gamma(k)) - n k
     log(\overline{x}) + \\
@@ -54,18 +54,18 @@
     \frac{1}{k} &= \frac{1}{k_0} + \frac{\overline{log(x)} -
       log(\overline{x}) + log(k_0) - \psi(k_0)}{k_0^2 (\frac{1}{k_0} -
       \psi'(k_0))}
-  \end{align*}
+  \end{align}
 \end{frame}
 
 \begin{frame}
   \frametitle{Estimadores da Distribuição $\Gamma(w;k,1)$}
   Quando $k \approx k_0$ então encontramos o estimador $\hat{k}$  
 
-  \small \begin{align*}
+  \small \begin{align}
 %    \label{eq:Gamma_MV}
     \intertext{Como k inicial podemos usar a seguinte aproximação}
     \hat{k} &= \frac{0.5}{log(\overline{x}) - \overline{log(x)}}
-  \end{align*}
+  \end{align}
 \end{frame}
 
 \begin{frame}
@@ -73,11 +73,11 @@
   
   Estimador pelo primeiro momento:
   
-    \begin{align*}
+    \begin{align}
 %      \label{eq:G_m_p2}
       E[W] &= k\theta \\
       \hat{k}_1 &= \frac{1}{n} \sum_{i=1}^nw_i 
-    \end{align*}
+    \end{align}
 \end{frame}
 
 \begin{frame}
@@ -85,11 +85,11 @@
   
   Estimador pelo segundo momento central:
   
-    \begin{align*}
+    \begin{align}
 %      \label{eq:G_m_p3}
       Var[W] &= k\theta^2 \\
       \hat{k}_2^0 &= Var(w)  
-    \end{align*}
+    \end{align}
 \end{frame}
 
 

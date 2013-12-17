@@ -118,6 +118,26 @@ for(k in 1:length(K))
     counter = counter + 1
   }
 }
+pdf("k_hat.pdf")
+bwplot( k_hat ~ N | K, data=estimatives, horizontal = FALSE)
+dev.off()
+pdf("k_til.pdf")
+bwplot( k_til ~ N | K, data=estimatives, horizontal = FALSE)
+dev.off()
+
+pdf("k1_hat.pdf")
+bwplot( k_hat ~ N | K, data=estimatives2, horizontal = FALSE)
+dev.off()
+pdf("k1_til.pdf")
+bwplot( k_til ~ N | K, data=estimatives2, horizontal = FALSE)
+dev.off()
+
+pdf("k2_hat.pdf")
+bwplot( k_hat ~ N | K, data=estimatives3, horizontal = FALSE)
+dev.off()
+pdf("k2_til.pdf")
+bwplot( k_til ~ N | K, data=estimatives3, horizontal = FALSE)
+dev.off()
 
 get_row = function(x)
 {
