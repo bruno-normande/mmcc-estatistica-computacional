@@ -13,7 +13,7 @@ first_moment = function(x, d)
 # var[X] = shape/rate^2
 # rate = 1
 # shape_hat = var(x)
-seg_cent_moment = function(x, d)
+second_cent_moment = function(x, d)
 {
   return(var(x[d]))
 }
