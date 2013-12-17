@@ -1,0 +1,83 @@
+\subsection{Distribuição T-Student}
+%========================================================================================================================================================
+\begin{frame}
+\frametitle{Distribuição T-Student}
+
+Seja Z uma v.a  N(0,1) e Y uma v.a. $\chi^2(1)$, com Z e Y independentes. Então a v.a. 
+
+\begin{center}$t=\displaystyle\frac{Z}{\sqrt{(Y/\nu)}}$,\end{center}
+
+tem densidade dada por
+
+ \begin{center}$f(t;\nu) = \displaystyle\frac{\Gamma ((\nu+1)/2)}{\Gamma(\nu/2)\sqrt(\pi \nu)} (1+t^2/\nu)^{-(\nu+1)/2}$, $-\infty < t < \infty$\end{center}
+
+Esta distribuição é denominada t-student, com $\nu$ grau de liberdade e possui as seguintes propriedades:
+
+\begin{itemize}
+  \item $f(t;\nu)$ é simétrica em relação a t = 0;
+  \item $f(t;\nu)$ é crescente no intervalo $( -\infty, 0)$ e decrescente en $(0, \infty)$;
+  \item $f(t;\nu)$ possui máximo em t = 0;
+  \item $f(t;\nu)$ é côncava para cima entre $(-\infty, a_{\nu})$ e $(a_{\nu}, \infty)$; e côncava para baixo em $(-a_{\nu}, a_{\nu})$, sendo $a_{\nu}=\sqrt{(\nu/(\nu+1)}$;
+  \item Os pontos de inflexão ocorrem em $t=\pm a_{\nu}$;
+  \item $f(t;\nu) \rightarrow 0$ quando $t \rightarrow\infty$ ou $t \rightarrow-\infty$;
+  \item $a_{\nu}\rightarrow 1$ quando $\nu\rightarrow \infty$;
+  \item Quanto maior o grau de liberdade, mais se aproxima da normal;
+  \item $f(t;\nu)$ é unimodal;
+\end{itemize}
+
+\end{frame}
+
+%========================================================================================================================================================
+
+%====================
+\subsubsection{Estimadores}
+%====================
+
+\begin{frame}
+\frametitle{Estimadores da distribuiç\~ao T-Student}
+
+Seja X uma variável aleatória com distribuição t-student com n grau de liberdade. Mostra-se que
+
+\begin{itemize}
+
+\item $E(X^k)$ é indefinido se k é ímpar e k $\geq$ n;
+\item $E(X^k)=\infty$ se k é par e k $\geq$ n;
+\item $E(X^k)=0$ k é ímpar e k $\leq$ n;
+
+\end{itemize} 
+
+Finalmente, se k é par e k $\leq$ n então
+
+\begin{center} $E(X^k) = \frac{\Gamma[(k + 1) / 2] \, \Gamma^{k/2}[(n - k) / 2]}{\sqrt{\pi} \, \Gamma(n / 2}$ \end{center}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{itemize}
+
+\item $E(X) = 0 se n > 1;$
+\item $Var(X) = \frac{n}{n-2} se n > 2;$
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+
+Seja $f(t;\nu) = \displaystyle\frac{\Gamma ((\nu+1)/2)}{\Gamma(\nu/2)\sqrt(\pi \nu)} (1+t^2/\nu)^{-(\nu+1)/2}$, $-\infty < t < \infty$, com $\nu$ grau de liberdade. Então a função verossimilhança de $f(t,\nu)$ é
+
+$L(t, \nu) = \prod_{i=1}^n f(t;\nu); \quad t = (t_1, t_2, \ldots, t_n) \in S, \; \nu \in \Theta$
+%$
+Esta função não possui expressão analítica fechada para a máxima log-verossimilhança. Deste modo, é necessário recorrer a análise numérica para sua determinação.
+
+\end{frame}
+
+%===================
+\subsubsection{Gr\' aficos}
+%===================
+
+\begin{frame}
+\frametitle{Gráficos da distribuição T-Student}
+
+\end{frame}
+%==========================================================================================================================
