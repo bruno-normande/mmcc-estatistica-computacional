@@ -19,11 +19,11 @@ second_cent_moment = function(x, d)
 }
 
 # temos que maximizar:
-# log(p(D|a,ˆb)) = n*(a−1)*mean(log(x)) − n*log(Γ(a)) − n*a*log(mean(x))+ n*a*log(a)−n*a
-# log(p(D|a,ˆb)) >= n*(a−1)*mean(log(x)) − n*log(Γ(a)) - n*a*log(mean(x))
+# log(p(D|a,^b)) = n*(a-1)*mean(log(x)) - n*log(G(a)) - n*a*log(mean(x))+ n*a*log(a)-n*a
+# log(p(D|a,^b)) >= n*(a-1)*mean(log(x)) - n*log(G(a)) - n*a*log(mean(x))
 #                               + n*(1 + log(a_0))*(a - a_0) + n*a_0*log(a_0) - n*a
-# Usando "generalized Newton" fazer a seguinte aproximação
-# log(p(D|a,ˆb)) ≈ c0 + c1*a + c2*log(a)
+# Usando generalized Newton fazer a seguinte aproximação
+# log(p(D|a,^b)) aproxx c0 + c1*a + c2*log(a)
 # 1/a = 1/a_0 + (mean(log(x)) - log(mean(x)) + log(a_0) - digamma(a_0)) / 
 #                                                         a_0^2*(1/a_0 - trigamma(a_0))
 max_ver = function(x, d){
